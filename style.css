@@ -1,9 +1,9 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #2c2a28;
-    color: #e0e0e0;
+    font-family: 'Times New Roman', serif;
+    background-color: #f5f5dc;
+    color: #3c2f2f;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,105 +12,106 @@ body {
 
 /* Header */
 .header {
-    background-color: #3e3b39;
-    color: #e0e0e0;
+    background-color: #d4af37;
+    color: #3c2f2f;
     padding: 20px;
     text-align: center;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 5px solid #8b4513;
 }
 
 .header h1 {
     margin: 0;
     font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Ad Spaces */
 .ads-left, .ads-right {
     position: fixed;
-    top: 80px;
-    width: 150px; /* Adjusted width */
-    height: calc(100% - 80px);
-    background-color: #3e3b39;
-    color: #d9b382;
+    top: 90px;
+    width: 150px;
+    background-color: #d4af37;
+    color: #3c2f2f;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1rem; /* Adjusted font size */
-    border: 1px solid #d9b382;
+    font-size: 1rem;
+    border: 2px solid #8b4513;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    padding: 10px; /* Added padding */
+    padding: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    font-family: 'Georgia', serif;
 }
 
 .ads-left {
-    left: 10px; /* Adjusted left position */
+    left: 15px;
 }
 
 .ads-right {
-    right: 10px; /* Adjusted right position */
+    right: 15px;
 }
 
 /* Main Content */
 .container {
-    margin: 120px auto 40px auto;
-    max-width: 1200px;
+    margin: 100px auto 30px auto;
+    max-width: 1000px;
     padding: 20px;
+    width: 90%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    gap: 20px;
-    width: 80%; /* Adjusted width */
+    gap: 25px;
+    background-color: #fffaf0;
+    border: 1px solid #8b4513;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 .main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 100%;
 }
 
-/* Individual Bar Cards */
 .main div {
-    background-color: #3e3b39;
-    border-radius: 12px 12px; /* Apply border-radius to both left and right sides */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
-    padding: 20px; /* Adjusted padding */
-    margin-right: 10px; /* Add margin to the right side */
-    overflow: hidden;
-    width: 100%;
+    background-color: #fffaf0;
+    border: 2px solid #8b4513;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Georgia', serif;
 }
 
 .main div:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
-}
-
-/* Ensure the right side does not touch the outside card */
-.main div:last-child {
-    margin-right: 0; /* Remove margin from the last card to prevent touching */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
 }
 
 .main h2 {
     font-size: 2rem;
-    color: #d9b382;
+    color: #3c2f2f;
     margin-bottom: 15px;
+    text-decoration: underline;
 }
 
 .main .bar-address {
     font-size: 1.2rem;
-    color: #e0e0e0;
+    color: #6b4226;
     margin-bottom: 20px;
     font-style: italic;
 }
 
 .main .bar-desc {
     font-size: 1.1rem;
-    color: #f4f4f4;
+    color: #3c2f2f;
     line-height: 1.8;
 }
 
@@ -119,28 +120,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 15px;
+    margin-top: 30px;
 }
 
 .pagination button {
     padding: 10px 20px;
-    background-color: #d9b382;
-    color: #2c2a28;
-    border: none;
-    border-radius: 5px;
+    background-color: #d4af37;
+    color: #3c2f2f;
+    border: 2px solid #8b4513;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
+    font-family: 'Georgia', serif;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #b8860b;
 }
 
 .pagination button:disabled {
-    background-color: #666;
+    background-color: #8b4513;
     cursor: not-allowed;
 }
 
 .pagination span {
     font-size: 1.2rem;
-    color: #e0e0e0;
+    color: #3c2f2f;
+    font-family: 'Georgia', serif;
 }
 
 /* Responsive Design */
@@ -150,33 +158,25 @@ body {
     }
 
     .container {
-        padding: 10px;
-        width: 95%; /* Adjusted width for smaller screens */
-    }
-
-    .main div {
-        padding: 15px; /* Adjusted padding for smaller screens */
-    }
-
-    .header h1 {
-        font-size: 2rem; /* Smaller font size for header on mobile */
+        width: 95%;
+        padding: 15px;
     }
 
     .main h2 {
-        font-size: 1.8rem; /* Smaller font size for bar titles on mobile */
+        font-size: 1.6rem;
     }
 
-    .main .bar-address {
-        font-size: 1.1rem; /* Smaller font size for addresses on mobile */
+    .main .bar-address, .main .bar-desc {
+        font-size: 1rem;
     }
 
-    .main .bar-desc {
-        font-size: 1rem; /* Smaller font size for descriptions on mobile */
+    .header h1 {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 1024px) {
     .ads-left, .ads-right {
-        width: 120px; /* Adjusted width for medium screens */
+        width: 120px;
     }
 }
